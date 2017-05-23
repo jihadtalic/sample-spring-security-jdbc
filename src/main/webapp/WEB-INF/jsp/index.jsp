@@ -14,22 +14,22 @@
 <p><u>Seller login details</u></p>
 <p>
     <ul>
-        <li>username: <strong>seller</strong></li>
-        <li>password: <strong>seller</strong></li>
+        <li>Username: <strong>roel.sinadjan@vistracks.com</strong></li>
+        <li>Password: <strong>seller</strong></li>
     </ul>
 </p>
 <p><u>Buyer login details</u></p>
 <p>
     <ul>
-        <li>username: <strong>buyer</strong></li>
-        <li>password: <strong>buyer</strong></li>
+        <li>Username: <strong>buyer@sample.com</strong></li>
+        <li>Password: <strong>buyer</strong></li>
     </ul>
 </p>
 <p><u>Disabled login details</u></p>
 <p>
     <ul>
-        <li>username: <strong>disabled</strong></li>
-        <li>password: <strong>disabled</strong></li>
+        <li>Username: <strong>disabled@sample.com</strong></li>
+        <li>Password: <strong>disabled</strong></li>
     </ul>
 </p>
 </body>

@@ -11,9 +11,8 @@
 <p>You can also check the <a href="<%=request.getContextPath()%>/buyer">Buyer Page</a></p>
 <p><a href=".">Return to home</a></p>
 <p>
-    <form id="logout" action="<%=request.getContextPath()%>/logout" method="post" >
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-        <input type="submit" value="logout" />
+    <form id="logout" action="<%=request.getContextPath()%>/logout/cas" method="post" >
+        <input type="submit" value="Logout" />
     </form>
 </p>
 </body>
