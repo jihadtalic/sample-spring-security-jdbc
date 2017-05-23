@@ -9,7 +9,7 @@
 <body>
 <h1>${ message }</h1>
 <p>
-    <a href="<%=request.getContextPath()%>/seller">Seller Page</a> | <a href="<%=request.getContextPath()%>/buyer">Buyer Page</a> | <a href="<%=request.getContextPath()%>/login">Login</a>
+    <a href="<%=request.getContextPath()%>/seller">Seller Page</a> | <a href="<%=request.getContextPath()%>/buyer">Buyer Page</a> <!-- | <a href="<%=request.getContextPath()%>/login">Login</a> -->
 </p>
 <p><u>Seller login details</u></p>
 <p>
