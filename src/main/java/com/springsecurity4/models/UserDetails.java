@@ -8,12 +8,16 @@ public class UserDetails {
     String firstName;
     String lastName;
     String companyName;
+    String roles;
+    String isActive;
 
-    public UserDetails(int userId, String firstName, String lastName, String companyName) {
+    public UserDetails(int userId, String firstName, String lastName, String companyName, String roles, String isActive) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.companyName = companyName;
+        this.roles = roles;
+        this.isActive = isActive;
     }
 
     public int getUserId () {
@@ -30,6 +34,14 @@ public class UserDetails {
 
     public String getCompanyName() {
         return this.companyName;
+    }
+
+    public String getRoles() {
+        return this.roles;
+    }
+
+    public String getIsActive() {
+        return this.isActive;
     }
 
 }

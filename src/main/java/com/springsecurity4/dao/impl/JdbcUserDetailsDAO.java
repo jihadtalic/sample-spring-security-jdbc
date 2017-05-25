@@ -20,13 +20,13 @@ public class JdbcUserDetailsDAO implements UserDetailsDao {
 
     public UserDetails findByUsername(String username){
 
-        String sql = "SELECT * FROM users AS u JOIN user_details AS ur ON u.id=ur.user_id WHERE u.username=?";
+        String query = "SELECT u.id as user_id, username, isactive, first_name, last_name, company_name, string_agg(role,', ') as roles FROM users u JOIN user_details AS ud ON u.id=ud.user_id JOIN user_roles AS ur ON u.id=ur.user_id JOIN roles AS r ON ur.role_id=r.id WHERE u.username=? GROUP BY  u.id, username, isactive, first_name, last_name, company_name";
 
         Connection conn = null;
 
         try {
             conn = dataSource.getConnection();
-            PreparedStatement ps = conn.prepareStatement(sql);
+            PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, username);
             UserDetails userDetails = null;
             ResultSet rs = ps.executeQuery();
@@ -35,7 +35,9 @@ public class JdbcUserDetailsDAO implements UserDetailsDao {
                     rs.getInt("user_id"),
                     rs.getString("first_name"),
                     rs.getString("last_name"),
-                    rs.getString("company_name")
+                    rs.getString("company_name"),
+                    rs.getString("roles"),
+                    rs.getString("isactive")
                 );
             }
             rs.close();

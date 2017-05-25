@@ -12,6 +12,8 @@
         <p><b>Username:</b> ${ userName }</p>
         <p><b>Name:</b> ${lastName}, ${firstName}</p>
         <p><b>Company:</b> ${companyName}</p>
+        <p><b>Role/s:</b> ${roles}</p>
+        <p><b>Active:</b> ${isActive}</p>
         <p><a href=".">Return to home</a></p>
         <p>
             <form id="logout" action="<%=request.getContextPath()%>/logout/cas" method="post" >

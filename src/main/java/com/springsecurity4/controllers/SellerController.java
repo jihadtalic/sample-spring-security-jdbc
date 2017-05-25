@@ -31,8 +31,10 @@ public class SellerController {
         model.addAttribute("firstName", userdetails.getFirstName());
         model.addAttribute("lastName", userdetails.getLastName());
         model.addAttribute("companyName", userdetails.getCompanyName());
+        model.addAttribute("roles", userdetails.getRoles());
+        model.addAttribute("isActive", userdetails.getIsActive());
         model.addAttribute("title", "This is the Seller Page.");
-        model.addAttribute("message", "Only users with ROLE_SELLER permissions can access this page");
+        model.addAttribute("message", "Only users with ROLE_SELLER permission can access this page");
 
         return "seller/seller";
     }
