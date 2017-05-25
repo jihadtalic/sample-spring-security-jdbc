@@ -1,6 +1,5 @@
 package com.springsecurity4.models;
 
-import java.sql.Timestamp;
 
 public class UserDetails {
 

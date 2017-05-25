@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.springsecurity4.models.UserDetails;
 import com.springsecurity4.dao.UserDetailsDao;
 
+
 @Controller
 public class BuyerController {
     @RequestMapping(value = "/buyer", method = RequestMethod.GET)

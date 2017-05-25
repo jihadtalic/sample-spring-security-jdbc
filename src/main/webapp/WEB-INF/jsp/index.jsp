@@ -8,9 +8,9 @@
 </head>
 <body>
 <h1>${ message }</h1>
-<p>
+<h2>
     <a href="<%=request.getContextPath()%>/seller">Seller Page</a> | <a href="<%=request.getContextPath()%>/buyer">Buyer Page</a> <!-- | <a href="<%=request.getContextPath()%>/login">Login</a> -->
-</p>
+</h2>
 <p><u>Seller login details</u></p>
 <p>
     <ul>
