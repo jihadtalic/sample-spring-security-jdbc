@@ -9,6 +9,14 @@
 <body>
 <h1>Error!</h1>
 <p>${ message }</p>
-<p><a href=".">Return to home</a></p>
+<span style="display: inline-flex;">
+    <p>
+        <form id="logout" action="<%=request.getContextPath()%>/logout/cas" method="post" >
+            <input type="submit" value="Logout" />
+        </form>
+    </p>
+    <p style="margin: 0;">&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;</p>
+    <a href=".">Return to home</a>
+</span>
 </body>
 </html>
