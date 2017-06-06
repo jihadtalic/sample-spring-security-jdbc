@@ -51,35 +51,18 @@
             <type>jar</type>
             <optional>false</optional>
         </dependency>
-        <!-- CAS client core -->
+        <!-- Spring Security SAML extension -->
         <dependency>
-            <groupId>org.jasig.cas.client</groupId>
-            <artifactId>cas-client-core</artifactId>
-            <version>${javaCasClient.version}</version>
-            <type>jar</type>
-            <optional>false</optional>
-        </dependency>
-        <!-- Caching -->
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-            <version>1.6.2</version>
-            <type>jar</type>
-            <optional>false</optional>
+          <groupId>org.springframework.security.extensions</groupId>
+          <artifactId>spring-security-saml2-core</artifactId>
+          <version>1.0.0.RELEASE</version>
+          <scope>compile</scope>
         </dependency>
         <!-- Logging -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
-            <type>jar</type>
-            <optional>false</optional>
-        </dependency>
-         <!-- PostreSQL -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.1.1.jre7</version>
             <type>jar</type>
             <optional>false</optional>
         </dependency>
