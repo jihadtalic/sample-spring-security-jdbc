@@ -51,6 +51,14 @@
             <type>jar</type>
             <optional>false</optional>
         </dependency>
+        <!-- CAS client core -->
+        <dependency>
+            <groupId>org.jasig.cas.client</groupId>
+            <artifactId>cas-client-core</artifactId>
+            <version>${javaCasClient.version}</version>
+            <type>jar</type>
+            <optional>false</optional>
+        </dependency>
         <!-- Spring Security SAML extension -->
         <dependency>
           <groupId>org.springframework.security.extensions</groupId>
