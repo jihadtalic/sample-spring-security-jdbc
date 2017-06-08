@@ -6,9 +6,9 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver" />
-        <property name="url" value="jdbc:postgresql://localhost:5432/test-database-may_19_2017-2" />
-        <property name="username" value="jihad" />
-        <property name="password" value="jihad" />
+        <property name="url" value="jdbc:postgresql://localhost:5432/sample_db" />
+        <property name="username" value="jihadtalic" />
+        <property name="password" value="jihadtalic" />
     </bean>
 
 </beans>
