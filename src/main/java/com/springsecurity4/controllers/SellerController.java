@@ -2,8 +2,7 @@ package com.springsecurity4.controllers;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.security.cas.authentication.CasAuthenticationToken;
-import org.springframework.security.core.userdetails.AuthenticationUserDetailsService;
+import org.springframework.security.providers.ExpiringUsernameAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -19,9 +18,8 @@ import com.springsecurity4.dao.UserDetailsDao;
 public class SellerController {
     @RequestMapping(value = "/seller", method = RequestMethod.GET)
     public String sellerPage(ModelMap model) {
-        SecurityContext ctx = SecurityContextHolder.getContext();
-        CasAuthenticationToken casAuthenticationToken = (CasAuthenticationToken) ctx.getAuthentication();
-        String username = casAuthenticationToken.getUserDetails().getUsername();
+        ExpiringUsernameAuthenticationToken credentials = (ExpiringUsernameAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+        String username =  credentials.getPrincipal().toString();
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-module.xml");
 
@@ -37,6 +35,6 @@ public class SellerController {
         model.addAttribute("title", "This is the Seller Page.");
         model.addAttribute("message", "Only users with ROLE_SELLER permission can access this page");
 
-        return "seller/seller";
+        return "/seller/seller";
     }
 }
